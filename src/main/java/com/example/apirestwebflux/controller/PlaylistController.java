@@ -9,6 +9,9 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.util.function.Tuple2;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -52,6 +55,8 @@ public class PlaylistController {
     public List<String> getPlaylistByMvc() throws InterruptedException {
 
         System.out.println("---Start get Playlists by MVC--- " + LocalDateTime.now());
+
+        InputStream in;
 
 
         List<String> playlistList = new ArrayList<>();
